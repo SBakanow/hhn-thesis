@@ -1,0 +1,16 @@
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.synctex.gz
+/build/
+/out/
+*.fdb_latexmk
+*.fls
+*.synctex.gz(busy)
+*.synctex(busy)
+.vscode/
