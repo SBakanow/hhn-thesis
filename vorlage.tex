@@ -1,0 +1,72 @@
+\documentclass[12pt,toc=bib,toc=listof]{scrreprt}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{csquotes}
+\usepackage[style=apa, backend=biber]{biblatex}
+\addbibresource{refs.bib}
+\usepackage{graphicx}
+\graphicspath{{img/}}
+\usepackage{quoting}
+\setquotestyle{german}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue}
+
+\newcommand{\hhnsubject}{Bachelor Thesis}
+\newcommand{\hhnsubjectnum}{SPO NUMMER}
+\newcommand{\hhnlecturer}{DOZENT}
+
+\newcommand{\reprttopic}{THEMA}
+\newcommand{\reprtstudentname}{Sergej Bakanow}
+\newcommand{\reprtstudentid}{170921}
+\urldef{\reprtstudentmail}\url{sbakanow@stud.hs-heilbronn.de}
+\addtokomafont{disposition}{\rmfamily}
+\setuptoc{toc}{totoc}
+
+\usepackage[headsepline]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\clearpairofpagestyles{}
+\ohead{\pagemark}
+\automark[chapter]{chapter}
+\ihead{\leftmark}
+\renewcommand*{\chapterpagestyle}{scrheadings}
+\renewcommand*{\chapterheadstartvskip}{}
+
+\titlehead{\flushright\includegraphics{hhn}}
+\subject{{\hhnsubject{} (\hhnsubjectnum{})}}
+\title{\reprttopic}
+\author{\reprtstudentname\footnote{\reprtstudentid, \reprtstudentmail}}
+\publishers{Eingereicht bei \hhnlecturer}
+
+\begin{document}
+\pagenumbering{Roman}
+\selectlanguage{ngerman}
+\maketitle
+\newgeometry{left=30mm, top=25mm, right=15mm, bottom=25mm}
+
+\include{Abstract/Abstract}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\addchap{Abkürzungsverzeichnis}\label{sec:abkuerzungsverzeichnis}
+
+\begin{description}
+  \item[ABK:] ABKÜRZUNG
+\end{description}
+
+\onehalfspacing{}
+
+\newpage
+\pagenumbering{arabic}
+
+\include{Einleitung/Einleitung}
+\include{Grundlagen/Grundlagen}
+\include{Fazit/Fazit}
+\include{Appendix/Appendix}
+\end{document}
