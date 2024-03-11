@@ -16,13 +16,18 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue}
 
-\newcommand{\hhnsubject}{Bachelor Thesis}
-\newcommand{\hhnsubjectnum}{SPO NUMMER}
-\newcommand{\hhnlecturer}{DOZENT}
+\newcommand{\hhnsubject}{\Large\textbf{Bachelorthesis}
 
-\newcommand{\reprttopic}{THEMA}
-\newcommand{\reprtstudentname}{Sergej Bakanow}
-\newcommand{\reprtstudentid}{170921}
+B. Sc.-Studiengang Software Engineering der Hochschule Heilbronn}
+\newcommand{\hhnfirstlecturer}{Prof.\ Dr.\ Martin Haag}
+\newcommand{\hhnsecondlecturer}{Prof.\ Dr.\ Max Mustermann}
+
+\newcommand{\reprttopic}{\LARGE\bfseries CONNECT\textunderscore{ED}
+
+Entwicklung eines intelligenten Kollaborationsdienstes zur KI-basierten
+Zusammenarbeit zwischen Rettungsdienst und Zentraler Notaufnahme}
+\newcommand{\reprtstudentname}{\Large\textbf{Sergej Bakanow}}
+\newcommand{\reprtstudentid}{\\\normalsize{Matrikelnummer: 170921}}
 \urldef{\reprtstudentmail}\url{sbakanow@stud.hs-heilbronn.de}
 \addtokomafont{disposition}{\rmfamily}
 \setuptoc{toc}{totoc}
@@ -36,11 +41,41 @@
 \renewcommand*{\chapterpagestyle}{scrheadings}
 \renewcommand*{\chapterheadstartvskip}{}
 
+\makeatletter
+\renewcommand{\maketitle}{%
+  \begin{titlepage}
+    \begin{flushright}
+      \includegraphics[width=5cm]{hhn}
+    \end{flushright}
+
+    \vspace*{\fill}
+
+    \begin{flushleft}
+      {\@title\par}
+      \vspace{1,5cm} % Adjust the vertical space as needed
+      {\@subject\par}
+      \vspace{2,5cm} % Adjust the vertical space as needed
+      {\@author\par}
+      \vspace{1,5cm} % Adjust the vertical space as needed
+      {\@publishers\par}
+      \vspace{1,5cm} % Adjust the vertical space as needed
+      Heilbronn, \today{}
+    \end{flushleft}
+
+    \vspace*{\fill}
+  \end{titlepage}%
+}
+\makeatother
+
 \titlehead{\flushright\includegraphics{hhn}}
-\subject{{\hhnsubject{} (\hhnsubjectnum{})}}
+\subject{\hhnsubject{}}
 \title{\reprttopic}
-\author{\reprtstudentname\footnote{\reprtstudentid, \reprtstudentmail}}
-\publishers{Eingereicht bei \hhnlecturer}
+\author{\reprtstudentname\vspace{0,25cm}\reprtstudentid}
+\publishers{\Large{\begin{tabular}{@{}l@{\hspace{4cm}}l}
+    Erstprüfer: & \begin{tabular}[t]{@{}r@{}}\hhnfirstlecturer\end{tabular} \\
+    Zweitprüfer: & \begin{tabular}[t]{@{}r@{}}\hhnsecondlecturer\end{tabular}
+  \end{tabular}}
+}
 
 \begin{document}
 \pagenumbering{Roman}
