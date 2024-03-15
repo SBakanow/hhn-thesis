@@ -15,15 +15,14 @@
 
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue}
+\usepackage{datetime2}
 
-\newcommand{\hhnsubject}{\Large\textbf{Bachelorthesis}
-
+\newcommand{\hhnsubject}{\Large\textbf{Bachelorthesis}\\
 B. Sc.-Studiengang Software Engineering der Hochschule Heilbronn}
 \newcommand{\hhnfirstlecturer}{Prof.\ Dr.\ Martin Haag}
 \newcommand{\hhnsecondlecturer}{Prof.\ Dr.\ Max Mustermann}
 
-\newcommand{\reprttopic}{\LARGE\bfseries CONNECT\textunderscore{ED}
-
+\newcommand{\reprttopic}{\LARGE\bfseries CONNECT\textunderscore{ED}\\
 Entwicklung eines intelligenten Kollaborationsdienstes zur KI-basierten
 Zusammenarbeit zwischen Rettungsdienst und Zentraler Notaufnahme}
 \newcommand{\reprtstudentname}{\Large\textbf{Sergej Bakanow}}
@@ -40,7 +39,6 @@ Zusammenarbeit zwischen Rettungsdienst und Zentraler Notaufnahme}
 \ihead{\leftmark}
 \renewcommand*{\chapterpagestyle}{scrheadings}
 \renewcommand*{\chapterheadstartvskip}{}
-
 \makeatletter
 \renewcommand{\maketitle}{%
   \begin{titlepage}
@@ -48,18 +46,18 @@ Zusammenarbeit zwischen Rettungsdienst und Zentraler Notaufnahme}
       \includegraphics[width=5cm]{hhn}
     \end{flushright}
 
-    \vspace*{\fill}
+    \vspace*{1,5cm}
 
     \begin{flushleft}
       {\@title\par}
-      \vspace{1,5cm} % Adjust the vertical space as needed
+      \vspace{1cm} % Adjust the vertical space as needed
       {\@subject\par}
-      \vspace{2,5cm} % Adjust the vertical space as needed
+      \vspace{2,25cm} % Adjust the vertical space as needed
       {\@author\par}
-      \vspace{1,5cm} % Adjust the vertical space as needed
+      \vspace{1,25cm} % Adjust the vertical space as needed
       {\@publishers\par}
-      \vspace{1,5cm} % Adjust the vertical space as needed
-      Heilbronn, \today{}
+      \vspace{1,25cm} % Adjust the vertical space as needed
+      Heilbronn, July 2024
     \end{flushleft}
 
     \vspace*{\fill}
